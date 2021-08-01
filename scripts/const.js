@@ -5,6 +5,7 @@ const repos = [
 
 const folderBlacklist = [
     // mature models... _(:ι」∠)_
+    // hello
     'UnHolY ToRturEr',
     'LOVE³-LOVE CUBE-',
     '[200228] [North Box] モノノ系彼女',
@@ -21,14 +22,15 @@ const folderBlacklist = [
 
 const fileBlacklist = [
     // broken file
-    'Sacred Sword princesses/model.json',
+    // 'Sacred Sword princesses/model.json',
 
     // mature model
-    'Sacred Sword princesses/boss_cg_live2d_h004/.model.json',
-    'Sacred Sword princesses/char_cg_live2d_h048/.model.json',
+    // 'Sacred Sword princesses/boss_cg_live2d_h004/.model.json',
+    // 'Sacred Sword princesses/char_cg_live2d_h048/.model.json',
+    'Sacred Sword princesses/boss_cg_live2d_006/res/nealamodel.moc',
 
     // non-model zip
-    '少女咖啡枪 girls cafe gun/UnityLive2DExtractor+for+ガール・カフェ・ガン.zip',
+    // '少女咖啡枪 girls cafe gun/UnityLive2DExtractor+for+ガール・カフェ・ガン.zip',
 ];
 
 const mocWhitelist = [

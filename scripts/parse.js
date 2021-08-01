@@ -108,6 +108,11 @@ function processTree(tree, fullPath) {
 }
 
 function processFile(file, siblings, fullPath) {
+    
+    if (fileBlacklist.includes(fullPath + '/' + file)) {
+        return false;
+    }
+
     if (file.endsWith('.moc') || file.endsWith('.moc3')) {
         if (mocWhitelist.includes(file)) {
             return false;
@@ -154,10 +159,6 @@ function processFile(file, siblings, fullPath) {
         jsons++;
 
         return true;
-    }
-
-    if (fileBlacklist.includes(fullPath + '/' + file)) {
-        return false;
     }
 
     return file.endsWith('model.json') || file.endsWith('model3.json') || file.endsWith('.zip');

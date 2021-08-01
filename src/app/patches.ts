@@ -111,6 +111,8 @@ async function urlToJSON(context: Live2DFactoryContext, next: (err?: any) => Pro
         context.source = json;
 
         console.log(json);
+        
+        console.log(json);
 
         context.live2dModel.emit('settingsJSONLoaded', json);
     }
