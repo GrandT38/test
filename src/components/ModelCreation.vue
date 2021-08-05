@@ -46,7 +46,7 @@ export default Vue.extend({
         value: Boolean,
     },
     data: () => ({
-        url: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/Live2D/Senko_Normals/senko.model3.json',
+        url: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/%E5%B0%91%E5%A5%B3%E5%89%8D%E7%BA%BF%20girls%20Frontline/live2dnew/hk416_3401/normal/normal.model3.json',
 
         dropHelpDialog: false,
 
@@ -57,6 +57,14 @@ export default Vue.extend({
         urlError: false,
         urlMessages: [] as string[],
     }),
+    mounted: () => {
+      console.log('Component has been created!');
+
+      const id = App.addModel('https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/%E5%B0%91%E5%A5%B3%E5%89%8D%E7%BA%BF%20girls%20Frontline/live2dnew/hk416_3401/normal/normal.model3.json');
+
+      // this.$emit('input', false);
+      // this.$emit('create', id);
+    },
     watch: {
         url(value) {
             const message = validateURL(value) || '';
