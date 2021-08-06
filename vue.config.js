@@ -30,7 +30,7 @@ module.exports = {
         config
             .plugin('html')
             .tap(args => {
-                args[0].title = 'Live2D Viewer Online';
+                args[0].title = 'testing site';
 
                 return args;
             });
