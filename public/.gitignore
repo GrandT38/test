@@ -1,7 +1,7 @@
-live2dcubismcore*
+#live2dcubismcore*
 
 scripts/**/*.json
-public/*.json
+#public/*.json
 
 .idea
 
