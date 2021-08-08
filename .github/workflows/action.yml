@@ -2,22 +2,41 @@ name: 'Auto deploy bot'
 
 on:
   push:
+    branches:
+      - main
   # schedule:
   #   - cron: '0 21 * * *'
 
 jobs:
-  bot:
+  build:
+    env:
+      MY_SECRET   : ${{secrets.commit_secret}}
+      USER_NAME   : githubaction
+      USER_EMAIL  : githubaction@fake.com
+      PUBLISH_DIR : ./dist  
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
-      # - name: 'Get Weather'
-      #   run: bash ./weather.sh
       - name: 'deploy steps'
         run: |
+          git config --local user.name $USER_NAME
+          git config --local user.email $USER_EMAIL
           yarn install
           yarn build
-          yarn deploy
+      - name: Commit files
+        run: |
+          cd $PUBLISH_DIR
+          git init
+          git config --local user.name $USER_NAME
+          git config --local user.email $USER_EMAIL
+          git status
+          git remote add origin https://$MY_SECRET@github.com/$GITHUB_REPOSITORY.git
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "deploy to Github pages"
+          git push origin gh-pages -f
+          echo 🤘 deploy gh-pages complete.
       # - name: 'Get Date'
       #   run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       # - name: 'Show report date'
