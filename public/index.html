@@ -45,14 +45,21 @@
   <!-- built files will be auto injected -->
   <script>
     console.log("aaa");
-    const url = "wttr.in";
+    const url = "http://wttr.in/?format=j1";
 
     const options = {
     };
 
     fetch(url, options)
       .then( res => res.json() )
-      .then( data => console.log(data) );
+      .then( data => {
+        console.log(data);
+
+        console.log(data.current_condition[0].lang_zh[0].value);
+        // var tempdata = '{ "current_condition":[ { "FeelsLikeC":"35", "FeelsLikeF":"94", "cloudcover":"24", "humidity":"82", "lang_zh":[ { "value":"局部多云" }, { "value":"局部多云2" }, { "value":"局部多云3" } ], "localObsDateTime":"2021-08-08 10:44 PM", "observation_time":"02:44 PM", "precipInches":"0.0", "precipMM":"0.0", "pressure":"1004", "pressureInches":"30", "temp_C":"29", "temp_F":"84", "uvIndex":"1", "visibility":"10", "visibilityMiles":"6", "weatherCode":"116", "weatherDesc":[ { "value":"Partly cloudy" } ], "weatherIconUrl":[ { "value":"" } ], "winddir16Point":"SW", "winddirDegree":"221", "windspeedKmph":"17", "windspeedMiles":"11" } ] }';
+        // var tempdataJson = JSON.parse(tempdata);
+        // console.log(tempdataJson.current_condition[0].lang_zh[2].value);
+      } );
   </script>
 </body>
 
