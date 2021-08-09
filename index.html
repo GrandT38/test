@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><head><script async src="https://www.googletagmanager.com/gtag/js?id=G-GK87CF5VW5"></script><script>window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-GK87CF5VW5');</script><meta charset="utf-8"><link rel="icon" href="favicon.ico"><title>testing site</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"><style>html {
+        font-family: Montserrat;
+    }</style><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><link href="css/app.ae0fb0de.css" rel="preload" as="style"><link href="css/chunk-vendors.593afdb7.css" rel="preload" as="style"><link href="js/app.98947db6.js" rel="preload" as="script"><link href="js/chunk-vendors.22a064cd.js" rel="preload" as="script"><link href="css/chunk-vendors.593afdb7.css" rel="stylesheet"><link href="css/app.ae0fb0de.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but testing site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><canvas id="canvas"></canvas><script src="live2dcubismcore.min.js"></script><script src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"></script><div id="app"></div><script>console.log("aaa");
+    const url = "https://wttr.in/?format=j1";
+
+    const options = {
+    };
+
+    fetch(url, options)
+      .then( res => res.json() )
+      .then( data => {
+        console.log(data);
+
+        console.log(data.current_condition[0].lang_zh[0].value);
+        // var tempdata = '{ "current_condition":[ { "FeelsLikeC":"35", "FeelsLikeF":"94", "cloudcover":"24", "humidity":"82", "lang_zh":[ { "value":"局部多云" }, { "value":"局部多云2" }, { "value":"局部多云3" } ], "localObsDateTime":"2021-08-08 10:44 PM", "observation_time":"02:44 PM", "precipInches":"0.0", "precipMM":"0.0", "pressure":"1004", "pressureInches":"30", "temp_C":"29", "temp_F":"84", "uvIndex":"1", "visibility":"10", "visibilityMiles":"6", "weatherCode":"116", "weatherDesc":[ { "value":"Partly cloudy" } ], "weatherIconUrl":[ { "value":"" } ], "winddir16Point":"SW", "winddirDegree":"221", "windspeedKmph":"17", "windspeedMiles":"11" } ] }';
+        // var tempdataJson = JSON.parse(tempdata);
+        // console.log(tempdataJson.current_condition[0].lang_zh[2].value);
+      } );</script><script src="js/chunk-vendors.22a064cd.js"></script><script src="js/app.98947db6.js"></script></body></html>
